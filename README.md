@@ -8,7 +8,8 @@
 
 [![npm version](https://img.shields.io/npm/v/vue-speedometer/latest?style=flat-square)](https://img.shields.io/npm/v/vue-speedometer/latest?style=flat-square)
 
-![vue-speedometer](https://raw.githubusercontent.com/marcosdom0826/vue-speedometer/master/speedo.gif)
+![image](https://github.com/marcosdom0826/vue-speedometer/assets/162916868/aab527f9-a8d5-428c-a4f6-9857927203f9)
+
 
 **IMPORTANT** `v3.0` is released which is a complete rewrite with composition api/SFC (single file components). Minimum required vue version is `v3.3`. If you are using Vue 3 composition api, please upgrade to `v3`
 
