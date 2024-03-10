@@ -2,13 +2,13 @@
 
 **vue-speedometer** is a Vue component library for showing speedometer like gauge using d3.
 
-[![Codecov](https://img.shields.io/codecov/c/gh/palerdot/vue-speedometer)](https://codecov.io/gh/palerdot/vue-speedometer)
+[![Codecov](https://img.shields.io/codecov/c/gh/marcosdom0826/vue-speedometer)](https://codecov.io/gh/marcosdom0826/vue-speedometer)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Github](https://github.com/palerdot/vue-speedometer/actions/workflows/workflow.yml/badge.svg)](https://github.com/palerdot/vue-speedometer/actions/workflows/workflow.yml/badge.svg)
+[![Github](https://github.com/marcosdom0826/vue-speedometer/actions/workflows/workflow.yml/badge.svg)](https://github.com/marcosdom0826/vue-speedometer/actions/workflows/workflow.yml/badge.svg)
 
 [![npm version](https://img.shields.io/npm/v/vue-speedometer/latest?style=flat-square)](https://img.shields.io/npm/v/vue-speedometer/latest?style=flat-square)
 
-![vue-speedometer](https://raw.githubusercontent.com/palerdot/vue-speedometer/master/speedo.gif)
+![vue-speedometer](https://raw.githubusercontent.com/marcosdom0826/vue-speedometer/master/speedo.gif)
 
 **IMPORTANT** `v3.0` is released which is a complete rewrite with composition api/SFC (single file components). Minimum required vue version is `v3.3`. If you are using Vue 3 composition api, please upgrade to `v3`
 
@@ -49,7 +49,7 @@ import VueSpeedometer from "vue-speedometer/slim"
 
 ## Examples:
 
-You can view [Live Examples here](https://palerdot.in/vue-speedometer/)
+You can view [Live Examples here](https://marcosdom0826.in/vue-speedometer/)
 
 
 ## Configuration Options:
@@ -60,12 +60,12 @@ You can view [Live Examples here](https://palerdot.in/vue-speedometer/)
 | minValue    | Number         | 0        |          |
 | maxValue    | Number         | 1000     |          |
 | segments    | Number         | 5        | Number of segments in the speedometer. Please note, `segments` is calculated with [d3-ticks]() which is an approximate count that is uniformly spaced between min and max. Please refer to [d3-ticks](https://github.com/d3/d3-scale/blob/master/README.md#continuous_ticks) and [d3-array ticks](https://github.com/d3/d3-array#ticks) for more detailed info.        |
-| maxSegmentLabels    | Number         | value from 'segments' prop        | Limit the number of segment labels to displayed. This is useful for acheiving a gradient effect by giving arbitrary large number of `segments` and limiting the labels with this prop. [See Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--gradient-effect-with-large-number-of-segments-and-maxsegmentlabels-config). Please note, `maxSegmentLabels` is calculated with [d3-ticks]() which is an approximate count that is uniformly spaced between min and max. Please refer to [d3-ticks](https://github.com/d3/d3-scale/blob/master/README.md#continuous_ticks) and [d3-array ticks](https://github.com/d3/d3-array#ticks) for more detailed info.        |
+| maxSegmentLabels    | Number         | value from 'segments' prop        | Limit the number of segment labels to displayed. This is useful for acheiving a gradient effect by giving arbitrary large number of `segments` and limiting the labels with this prop. [See Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--gradient-effect-with-large-number-of-segments-and-maxsegmentlabels-config). Please note, `maxSegmentLabels` is calculated with [d3-ticks]() which is an approximate count that is uniformly spaced between min and max. Please refer to [d3-ticks](https://github.com/d3/d3-scale/blob/master/README.md#continuous_ticks) and [d3-array ticks](https://github.com/d3/d3-array#ticks) for more detailed info.        |
 | forceRender | Boolean        | false    | After initial rendering/mounting, when props change, only the `value` is changed and animated to maintain smooth visualization. But, if you want to force rerender the whole component like change in segments, colors, dimensions etc, you can use this option to force rerender of the whole component on props change.         |
 | width       | Number         | 300      | **diameter** of the speedometer and the **width** of the svg element |
 | height      | Number         | 300      | height of the svg element. Height of the speedometer is always half the width since it is a **semi-circle**. For fluid width, please refere to `fluidWidth` config |
 | dimensionUnit | String         | px     | Default to `px` for `width/height`. Possible values - `"em" , "ex" , "px" , "in" , "cm" , "mm" , "pt" , ,"pc"` ... Please refer to [specification](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#Length) for more details |
-| fluidWidth  | Boolean        | false    | If `true` takes the width of the parent component. See [Live Example](https://palerdot.in/vue-speedometer/?selectedStory=Fluid%20Width%20view&full=0&down=0&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel) for more details |
+| fluidWidth  | Boolean        | false    | If `true` takes the width of the parent component. See [Live Example](https://marcosdom0826.in/vue-speedometer/?selectedStory=Fluid%20Width%20view&full=0&down=0&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel) for more details |
 | needleColor | String         | steelblue | Should be a valid color code - colorname, hexadecimal name or rgb value. Should be a valid input for [d3.interpolateHsl](https://github.com/d3/d3-interpolate#interpolateHsl)   |
 | startColor | String         | #FF471A | Should be a valid color code - colorname, hexadecimal name or rgb value. Should be a valid input for [d3.interpolateHsl](https://github.com/d3/d3-interpolate#interpolateHsl)   |
 | endColor | String         |  #33CC33 | Should be a valid color code - colorname, hexadecimal name or rgb value. Should be a valid input for [d3.interpolateHsl](https://github.com/d3/d3-interpolate#interpolateHsl)   |
@@ -77,9 +77,9 @@ You can view [Live Examples here](https://palerdot.in/vue-speedometer/)
 | textColor | String         | #666     | Should be a valid color code - colorname, hexadecimal name or rgb value. Used for both showing the current value and the segment values |
 | valueFormat | String       |  | should be a valid format for [d3-format](https://github.com/d3/d3-format#locale_format). By default, no formatter is used. You can use a valid d3 format identifier (for eg: `d` to convert float to integers), to format the values. **Note:** This formatter affects all the values (current value, segment values) displayed in the speedometer |
 | segmentValueFormatter | Function | value => value     | Custom segment values formatter function. This function is applied after 'valueFormat' prop if present. |
-| currentValueText | String | ${value} | Should be provided a string which should have **${value}** placeholder which will be replaced with current value. By default, current value is shown (formatted with `valueFormat`). For example, if current Value is 333 if you would like to show `Current Value: 333`, you should provide a string **`Current Value: ${value}`**. See [Live Example](https://palerdot.in/vue-speedometer/?selectedKind=vue-speedometer&selectedStory=Custom%20Current%20Value%20Text&full=0&down=1&left=1&panelRight=0) |
+| currentValueText | String | ${value} | Should be provided a string which should have **${value}** placeholder which will be replaced with current value. By default, current value is shown (formatted with `valueFormat`). For example, if current Value is 333 if you would like to show `Current Value: 333`, you should provide a string **`Current Value: ${value}`**. See [Live Example](https://marcosdom0826.in/vue-speedometer/?selectedKind=vue-speedometer&selectedStory=Custom%20Current%20Value%20Text&full=0&down=1&left=1&panelRight=0) |
 | currentValuePlaceholderStyle | String | ${value} | Should be provided a placeholder string which will be replaced with current value in `currentValueTextProp`. For example: you can use ruby like interpolation by giving following props - `<vue-speedometer    currentValueText="Current Value: #{value}" currentValuePlaceholderStyle={"#{value}"} />`. This is also helpful if you face `no-template-curly-in-string` eslint warnings and would like to use different placeholder for current value |
-| customSegmentStops | Array         | []     | Array of values **starting** at `min` value, and **ending** at `max` value. This configuration is useful if you would like to split the segments at custom points or have unequal segments at preferred values. If the values does not begin and end with `min` and `max` value respectively, an error will be thrown. This configuration will override `segments` prop, since total number of segments will be `length - 1` of `customSegmentProps`. For example, `[0, 50, 75, 100]` value will have three segments - `0-50`, `50-75`, `75-100`. See [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-stops) |
+| customSegmentStops | Array         | []     | Array of values **starting** at `min` value, and **ending** at `max` value. This configuration is useful if you would like to split the segments at custom points or have unequal segments at preferred values. If the values does not begin and end with `min` and `max` value respectively, an error will be thrown. This configuration will override `segments` prop, since total number of segments will be `length - 1` of `customSegmentProps`. For example, `[0, 50, 75, 100]` value will have three segments - `0-50`, `50-75`, `75-100`. See [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-stops) |
 | customSegmentLabels | Array`<CustomSegmentLabel>` | [] | Takes an array of `CustomSegmentLabel` objects. Each object has following keys for custom rendering of labels - `text`, `fontSize`, `color`, `position: OUTSIDE/INSIDE`. For `position`, there is a helper `CustomSegmentLabelPosition` Object/Type which you can import like `import { CustomSegmentLabelPosition } from 'vue-speedometer'`, and use it like `CustomSegmentLabelPosition.Inside / CustomSegmentLabelPosition.Outside`. This works for both JS and Typescript. For `type(script)` definitions, please refer [here](./src/index.d.ts).  |
 | labelFontSize | String         | 14px     | Font size for segment labels/legends |
 | valueTextFontSize | String         | 16px     | Font size for current value text |
@@ -90,9 +90,9 @@ You can view [Live Examples here](https://palerdot.in/vue-speedometer/)
 
 ## Examples
 
-You can view [Live Examples here](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--default-with-no-config)
+You can view [Live Examples here](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--default-with-no-config)
 
-#### Default with no config - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--default-with-no-config)
+#### Default with no config - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--default-with-no-config)
 
 ```javascript
 export default {
@@ -101,7 +101,7 @@ export default {
 }
 ```
 
-#### With configurations - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--configuring-values)
+#### With configurations - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--configuring-values)
 
 ```javascript
 export default {
@@ -110,7 +110,7 @@ export default {
 }
 ```
 
-#### Custom Segment Labels - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-labels)
+#### Custom Segment Labels - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-labels)
 
 ```javascript
 // 'customSegmentLabels' prop takes an array of 'CustomSegmentLabel' Object
@@ -173,7 +173,7 @@ export default {
 />
 ```
 
-#### Custom Segment Colors - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-colors)
+#### Custom Segment Colors - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-colors)
 
 ```javascript
 export default {
@@ -195,7 +195,7 @@ export default {
 />
 ```
 
-#### Custom Segment Stops - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-stops)
+#### Custom Segment Stops - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--custom-segment-stops)
 
 ```javascript
   export default {
@@ -218,7 +218,7 @@ export default {
 />
 ```
 
-#### Fluid Width Example - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--fluid-width-view)
+#### Fluid Width Example - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--fluid-width-view)
 
 ```javascript
 // Speedometer will take the width of the parent div (500)
@@ -251,7 +251,7 @@ export default {
 }
 ```
 
-#### Needle Transition Example - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--needle-transition-duration)
+#### Needle Transition Example - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--needle-transition-duration)
 
 ```javascript
 export default {
@@ -269,7 +269,7 @@ export default {
 }
 ```
 
-#### Force Render component on props change - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--force-render-the-component)
+#### Force Render component on props change - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--force-render-the-component)
 
 ```javascript
 // By default, when props change, only the value prop is updated and animated. 
@@ -292,7 +292,7 @@ export default {
 }
 ```
 
-#### Needle Height Configuration Example - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--configure-needle-length-and-font-sizes)
+#### Needle Height Configuration Example - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--configure-needle-length-and-font-sizes)
 
 ```javascript
 export default {
@@ -311,7 +311,7 @@ export default {
 You can give a value between `0` and `1` to control the needle height.
 
 
-#### Gradient Like Effect - [Live Example](https://palerdot.in/vue-speedometer/?path=/story/vue-speedometer--gradient-effect-with-large-number-of-segments-and-max-segment-labels-config)
+#### Gradient Like Effect - [Live Example](https://marcosdom0826.in/vue-speedometer/?path=/story/vue-speedometer--gradient-effect-with-large-number-of-segments-and-max-segment-labels-config)
 
 ```javascript
 export default {
@@ -371,14 +371,14 @@ module.exports = {
 ---
 
 ## Ports:
-- React: [react-d3-speedometer](https://github.com/palerdot/react-d3-speedometer)
-- Svelte: [svelte-speedometer](https://github.com/palerdot/svelte-speedometer)
+- React: [react-d3-speedometer](https://github.com/marcosdom0826/react-d3-speedometer)
+- Svelte: [svelte-speedometer](https://github.com/marcosdom0826/svelte-speedometer)
 
 ---
 
 ## About
 
-`vue-speedometer` shares its core with [react-d3-speedometer](https://github.com/palerdot/react-d3-speedometer). For more info and context, please visit [react-d3-speedometer](https://github.com/palerdot/react-d3-speedometer) 
+`vue-speedometer` shares its core with [react-d3-speedometer](https://github.com/marcosdom0826/react-d3-speedometer). For more info and context, please visit [react-d3-speedometer](https://github.com/marcosdom0826/react-d3-speedometer) 
 
 ---
 
